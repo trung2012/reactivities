@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Menu, Container, Button } from 'semantic-ui-react';
 
-interface IProps {
-  openCreateForm: () => void;
-}
+import ActivityStore from '../../app/stores/activityStore';
 
-const NavBar: React.FC<IProps> = ({ openCreateForm }) => {
+const NavBar = () => {
+  const { openCreateForm } = useContext(ActivityStore);
+
   return (
     <Menu fixed='top' inverted>
       <Container>
