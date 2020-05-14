@@ -15,6 +15,7 @@
     "mobx-react-lite": "^2.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "semantic-ui-react": "^0.88.2",
     "typescript": "^3.7.5",
@@ -42,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.5",
     "@types/uuid": "^7.0.3"
   }
 }
