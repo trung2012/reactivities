@@ -11,16 +11,23 @@
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
     "axios": "^0.19.2",
+    "date-fns": "^2.0.0-alpha.13",
+    "final-form": "^4.19.1",
     "mobx": "^5.15.4",
     "mobx-react-lite": "^2.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-final-form": "^6.3.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-toastify": "^6.0.4",
-    "semantic-ui-react": "^0.88.2",
+    "react-widgets": "^4.2.2",
+    "react-widgets-date-fns": "^4.0.19",
+    "revalidate": "^1.2.0",
+    "semantic-ui-react": "^0.88.1",
     "typescript": "^3.7.5",
-    "uuid": "^8.0.0"
+    "uuid": "^8.0.0",
+    "widgets": "^0.3.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,6 +52,8 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.5",
+    "@types/react-widgets": "^4.4.2",
+    "@types/revalidate": "^1.1.2",
     "@types/uuid": "^7.0.3"
   }
 }
