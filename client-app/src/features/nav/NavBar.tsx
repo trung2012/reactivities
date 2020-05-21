@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
-import { Menu, Container, Button } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
+import { Menu, Container, Button, Dropdown, Image } from 'semantic-ui-react';
+import { NavLink, Link } from 'react-router-dom';
 
-import ActivityStore from '../../app/stores/activityStore';
+import { RootStoreContext } from '../../app/stores/rootStore';
 
 const NavBar = () => {
-  const { openCreateForm } = useContext(ActivityStore);
+  const { activityStore, userStore } = useContext(RootStoreContext);
+  const { openCreateForm } = activityStore;
+  const { logout, user } = userStore;
 
   return (
     <Menu fixed='top' inverted>
@@ -23,6 +25,18 @@ const NavBar = () => {
             to='/createActivity'
           />
         </Menu.Item>
+        {
+          user &&
+          <Menu.Item position='right'>
+            <Image avatar spaced='right' src={user.image || '/assets/user.png'} />
+            <Dropdown pointing='top left' text={user.displayName}>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to={`/profile/username`} text='My profile' icon='user' />
+                <Dropdown.Item text='Logout' icon='power' onClick={logout} />
+              </Dropdown.Menu>
+            </Dropdown>
+          </Menu.Item>
+        }
       </Container>
     </Menu>
   )
