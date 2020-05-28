@@ -31,7 +31,7 @@ const NavBar = () => {
             <Image avatar spaced='right' src={user.image || '/assets/user.png'} />
             <Dropdown pointing='top left' text={user.displayName}>
               <Dropdown.Menu>
-                <Dropdown.Item as={Link} to={`/profile/username`} text='My profile' icon='user' />
+                <Dropdown.Item as={Link} to={`/profile/${user.username}`} text='My profile' icon='user' />
                 <Dropdown.Item text='Logout' icon='power' onClick={logout} />
               </Dropdown.Menu>
             </Dropdown>
